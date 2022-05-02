@@ -5,11 +5,22 @@ class Board extends React.Component {
 }
 
 class Square extends React.Component{
+    constructor(props){
+      super(props);
+      this.state = { value: null,
+      };
+    }
   render(){
     return(
-      <button className="square" onClick={function(){
-        console.log('click');
-      }}> {this.props.value} </button>
-    )
+      <button className="square"
+      onClick={()=> useState({value: 'X'})}
+      >
+      {this.state.value}
+      </button>
+    );
   }
+}
+
+
+
 }
